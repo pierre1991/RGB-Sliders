@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="is3-mg-n6K">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RGB_Sliders" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="d3Y-bE-tz1">
+                                <rect key="frame" x="101" y="350" width="118" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="updateBackgrounColor" destination="BYZ-38-t0r" eventType="valueChanged" id="vlg-N4-z4M"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2YN-Uc-DVZ">
+                                <rect key="frame" x="101" y="395" width="118" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="updateBackgrounColor" destination="BYZ-38-t0r" eventType="valueChanged" id="6SC-Vm-zvh"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="m7F-Jy-3H4">
+                                <rect key="frame" x="101" y="440" width="118" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="updateBackgrounColor" destination="BYZ-38-t0r" eventType="valueChanged" id="aDa-Bs-NCC"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1jR-FI-CbT">
+                                <rect key="frame" x="140" y="264" width="40" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJU-kC-pBr">
+                                <rect key="frame" x="141" y="499" width="38" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Open"/>
+                                <connections>
+                                    <segue destination="Y0c-tG-hRi" kind="show" id="Qf1-zd-Uf8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9DS-Tj-6o5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="blueSlider" destination="m7F-Jy-3H4" id="7AR-F7-4K9"/>
+                        <outlet property="colorSquare" destination="1jR-FI-CbT" id="9ug-i0-KUw"/>
+                        <outlet property="greenSlider" destination="2YN-Uc-DVZ" id="TUx-VS-3YG"/>
+                        <outlet property="redSlider" destination="d3Y-bE-tz1" id="nOZ-RI-ehT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="477"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BRq-gK-MU2">
+            <objects>
+                <viewController id="Y0c-tG-hRi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I2R-qv-tDx"/>
+                        <viewControllerLayoutGuide type="bottom" id="bb0-YC-L1X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0X7-HF-4cc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Hc-AF-WPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="477"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gIT-9J-fPQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="is3-mg-n6K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vWw-TO-cLi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="39f-Ct-mdB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c7H-2s-ede" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="477"/>
+        </scene>
+    </scenes>
+</document>
